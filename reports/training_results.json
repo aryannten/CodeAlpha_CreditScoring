@@ -1,0 +1,129 @@
+{
+  "dataset": "German Credit (credit-g, OpenML v1)",
+  "default_rate": 0.3,
+  "best_model": {
+    "model": "Logistic Regression",
+    "imbalance": "class_weight_balanced",
+    "test_roc_auc": 0.8153571428571429,
+    "cv_roc_auc": 0.7793526785714285,
+    "best_params": {
+      "classifier__solver": "lbfgs",
+      "classifier__penalty": "l2",
+      "classifier__C": 0.1668100537200059
+    }
+  },
+  "results": [
+    {
+      "model": "Logistic Regression",
+      "imbalance": "class_weight_balanced",
+      "cv_roc_auc": 0.7793526785714285,
+      "test_roc_auc": 0.8153571428571429,
+      "best_params": {
+        "classifier__solver": "lbfgs",
+        "classifier__penalty": "l2",
+        "classifier__C": 0.1668100537200059
+      }
+    },
+    {
+      "model": "Logistic Regression",
+      "imbalance": "smote",
+      "cv_roc_auc": 0.7807291666666667,
+      "test_roc_auc": 0.8125000000000001,
+      "best_params": {
+        "classifier__solver": "lbfgs",
+        "classifier__penalty": "l2",
+        "classifier__C": 0.1668100537200059
+      }
+    },
+    {
+      "model": "Decision Tree",
+      "imbalance": "class_weight_balanced",
+      "cv_roc_auc": 0.7063988095238095,
+      "test_roc_auc": 0.6706547619047618,
+      "best_params": {
+        "classifier__min_samples_split": 20,
+        "classifier__min_samples_leaf": 1,
+        "classifier__max_depth": 5,
+        "classifier__criterion": "gini"
+      }
+    },
+    {
+      "model": "Decision Tree",
+      "imbalance": "smote",
+      "cv_roc_auc": 0.7355282738095238,
+      "test_roc_auc": 0.6367857142857143,
+      "best_params": {
+        "classifier__min_samples_split": 20,
+        "classifier__min_samples_leaf": 1,
+        "classifier__max_depth": 5,
+        "classifier__criterion": "gini"
+      }
+    },
+    {
+      "model": "Random Forest",
+      "imbalance": "class_weight_balanced",
+      "cv_roc_auc": 0.8004836309523811,
+      "test_roc_auc": 0.8004761904761905,
+      "best_params": {
+        "classifier__n_estimators": 200,
+        "classifier__min_samples_split": 10,
+        "classifier__min_samples_leaf": 2,
+        "classifier__max_features": "log2",
+        "classifier__max_depth": null
+      }
+    },
+    {
+      "model": "Random Forest",
+      "imbalance": "smote",
+      "cv_roc_auc": 0.7992187500000001,
+      "test_roc_auc": 0.8001190476190477,
+      "best_params": {
+        "classifier__n_estimators": 200,
+        "classifier__min_samples_split": 10,
+        "classifier__min_samples_leaf": 2,
+        "classifier__max_features": "log2",
+        "classifier__max_depth": null
+      }
+    },
+    {
+      "model": "XGBoost",
+      "imbalance": "scale_pos_weight",
+      "cv_roc_auc": 0.7961681547619047,
+      "test_roc_auc": 0.7982142857142858,
+      "best_params": {
+        "classifier__subsample": 0.7,
+        "classifier__n_estimators": 100,
+        "classifier__max_depth": 5,
+        "classifier__learning_rate": 0.05,
+        "classifier__colsample_bytree": 0.85
+      }
+    },
+    {
+      "model": "XGBoost",
+      "imbalance": "smote",
+      "cv_roc_auc": 0.798139880952381,
+      "test_roc_auc": 0.7896428571428571,
+      "best_params": {
+        "classifier__subsample": 0.7,
+        "classifier__n_estimators": 300,
+        "classifier__max_depth": 7,
+        "classifier__learning_rate": 0.01,
+        "classifier__colsample_bytree": 0.85
+      }
+    }
+  ],
+  "feature_engineering_lift": [
+    {
+      "model": "Logistic Regression",
+      "raw_features_roc_auc": 0.8051,
+      "engineered_features_roc_auc": 0.8046,
+      "lift": -0.0005
+    },
+    {
+      "model": "Random Forest",
+      "raw_features_roc_auc": 0.8001,
+      "engineered_features_roc_auc": 0.7874,
+      "lift": -0.0127
+    }
+  ]
+}
